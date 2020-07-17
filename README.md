@@ -12,6 +12,7 @@ In 2017, Emmanuel Macron and Marine Le Pen were the final two candidates in the 
 - [Objective](#objective)
 - [Approach](#approach)
 - [Tweet Analysis](#tweet-analysis)
+- [Conclusion](#conclusion)
 
 
 <br>
@@ -25,7 +26,7 @@ The objective of this case study was to analyzie twitter discussions happening i
 ## Approach
 
 - Use data gathered from Twitter API
-- Process data in Spark  
+- Process data in Spark with PySpark 
 - Visualize insights with Python library Matplotlib
 
 <br>
@@ -98,7 +99,7 @@ root
  
  
  ```
-# Which candidate is more popular?
+#### Which candidate is more popular?
 
 For analysis, we first wanted to see who was mentioned more often - Emmanuel Macron or Marine Le Pen. 
 We used the following code:
@@ -121,7 +122,7 @@ Since the elections are in the past, we can compare our numbers to the voting re
   
   
 
-# Who else were mentioned
+#### Who else were mentioned
 
 For the next step, we wanted to find out who else were mentioned often in tweets. For that, we used RDD file:
 
@@ -129,6 +130,28 @@ For the next step, we wanted to find out who else were mentioned often in tweets
 user_mentions = (tweets_rdd.flatMap(lambda row: entity_fix(row))
               .filter(lambda empty: (empty != []) and (empty != 'x'))
               .map(lambda name: name['screen_name']))
+              
 ```
 
 
+<p align="center"><img width=86% src=https://github.com/JuliaSokolova/2017_French_Presidential_election_tweets_analysis-/blob/master/top10users.png> 
+  
+  
+  
+#### What hashtags did people use most often
+
+Using same approach, we found the most popular hashtags:
+
+```
+hashtags = (tweets_rdd.flatMap(lambda row: hashtag_fix(row))
+          .filter(lambda empty: (empty != []) and (empty != 'x'))
+          .map(lambda text: text['text']))
+```
+
+<p align="center"><img width=86% src=https://github.com/JuliaSokolova/2017_French_Presidential_election_tweets_analysis-/blob/master/top10hashtags.png> 
+
+<br>
+
+## Conclusion
+
+Our exploratory data analysis shows that Twitter can be used as an instument to forecast president election results. 
