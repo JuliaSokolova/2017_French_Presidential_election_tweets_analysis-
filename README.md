@@ -137,8 +137,8 @@ origins.count()
 
 ```
 We got this numbers:
-- Emmanuel Macron: 2 185 mentions (63%)
-- Marine Le Pen: 1 279 mentions (36%)
+- Emmanuel Macron: 2,185 mentions (63%)
+- Marine Le Pen: 1,279 mentions (36%)
 
 Since the elections are in the past, we can compare our numbers to the voting results:
 
