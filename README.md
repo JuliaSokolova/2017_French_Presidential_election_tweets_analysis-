@@ -38,6 +38,8 @@ The objective of this case study was to analyzie twitter discussions happening i
 - Retreiving data using .count() and .collect() methods on nested data
 - PySpark Docker crashing
 
+<br>
+
 ## Tweet Analysis
 
 To load data, we feed .json file into Spark docker container: 
