@@ -182,17 +182,17 @@ fig.tight_layout()
   
 Besides Emmanual Macron and MLP, who are these other mentions?
 
-TLMP: <a href="https://en.wikipedia.org/wiki/It's_Only_TV">It's only TV</a>, a French television show known as Touche pas à mon poste ! that was covering the election heavily.
+- TLMP: <a href="https://en.wikipedia.org/wiki/It's_Only_TV">It's only TV</a>, a French television show known as Touche pas à mon poste ! that was covering the   election heavily.
 
-BFMTV: <a href='https://en.wikipedia.org/wiki/BFM_TV'>A 24 hour news</a> and weather channel.
+- BFMTV: <a href='https://en.wikipedia.org/wiki/BFM_TV'>A 24 hour news</a> and weather channel.
 
-cyrilhanouna: <a href='https://en.wikipedia.org/wiki/Cyril_Hanouna'>Cyril Hanouna</a> is the host of TLMP.
+- cyrilhanouna: <a href='https://en.wikipedia.org/wiki/Cyril_Hanouna'>Cyril Hanouna</a> is the host of TLMP.
 
-JLMelenchon: <a href='https://en.wikipedia.org/wiki/Jean-Luc_M%C3%A9lenchon'>Jean-Luc Melenchon</a> was another candidate running for the French presidency in 2017.
+- JLMelenchon: <a href='https://en.wikipedia.org/wiki/Jean-Luc_M%C3%A9lenchon'>Jean-Luc Melenchon</a> was another candidate running for the French presidency in 2017.
 
-dupontaignon: <a href='https://en.wikipedia.org/wiki/Nicolas_Dupont-Aignan'>Nicolas Dupont-Aignan</a> former wine maker and president of Debout la France.
+- dupontaignon: <a href='https://en.wikipedia.org/wiki/Nicolas_Dupont-Aignan'>Nicolas Dupont-Aignan</a> former wine maker and president of Debout la France.
 
-narcissik13: BANNED FROM TWITTER.
+- narcissik13: BANNED FROM TWITTER.
 
 
   
