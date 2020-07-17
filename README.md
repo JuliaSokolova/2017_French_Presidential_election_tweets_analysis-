@@ -11,6 +11,20 @@ In 2017, Emmanuel Macron and Marine Le Pen were the final two candidates in the 
 
 - [Objective](#objective)
 - [Approach](#approach)
-- [Study Dataset Creation](#study-dataset-creation)
 - [Tweet Analysis](#tweet-analysis)
-- [Results](#results)
+
+
+<br>
+## Objective 
+
+The objective of this case study was to analyzie twitter discussions happening in France in time before the election to compare popularity of both candiates, and to point media influencers. 
+
+<br>
+## Approach
+
+- Use data gathered from Twitter API, 
+- Process data in Spark  
+- Visualize insights with Python library Matplotlib
+
+<br>
+## Tweet Analysis
