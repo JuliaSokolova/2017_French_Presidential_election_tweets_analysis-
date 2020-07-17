@@ -31,6 +31,13 @@ The objective of this case study was to analyzie twitter discussions happening i
 
 <br>
 
+## Challenges
+
+- Deciding between DataFrame and RDD
+- Deciphering cause of errors from PySpark
+- Retreiving data using .count() and .collect() methods on nested data
+- PySpark Docker crashing
+
 ## Tweet Analysis
 
 To load data, we feed .json file into Spark docker container: 
@@ -99,6 +106,22 @@ root
  
  
  ```
+ 
+#### Reading in JSON file to RDD for processing:
+
+```
+def failsafe_decode(row):
+    try:
+        return json.loads(row)
+    except:
+        return None
+    
+rdd = sc.textFile("./data/french_tweets.json")
+
+tweets_rdd = rdd.map(lambda x: failsafe_decode(x)).filter(lambda x: x!=None).cache()
+
+```
+
 #### Which candidate is more popular?
 
 For analysis, we first wanted to see who was mentioned more often - Emmanuel Macron or Marine Le Pen. 
@@ -133,6 +156,25 @@ user_mentions = (tweets_rdd.flatMap(lambda row: entity_fix(row))
               
 ```
 
+```
+user_mentions_list = user_mentions.collect()
+user_mentions_count = Counter(user_mentions_list)
+users = []
+counts = []
+
+sort_users = sorted(user_mentions_count.items(), key=lambda x: x[1], reverse=True)
+
+for i in sort_users:
+    users.append(i[0])
+    counts.append(i[1])
+
+fig, ax = plt.subplots(figsize=(12,5))
+ax.title.set_text('Top 10 Mentioned Users')
+ax.bar(users[0:10], counts[0:10])
+plt.xticks(rotation=45)
+fig.tight_layout()
+```
+
 
 <p align="center"><img width=86% src=https://github.com/JuliaSokolova/2017_French_Presidential_election_tweets_analysis-/blob/master/top10users.png> 
   
@@ -160,6 +202,29 @@ Using same approach, we found the most popular hashtags:
 hashtags = (tweets_rdd.flatMap(lambda row: hashtag_fix(row))
           .filter(lambda empty: (empty != []) and (empty != 'x'))
           .map(lambda text: text['text']))
+```
+
+```
+hashtags_list = hashtags.collect()
+hashtags_count = Counter(hashtags_list)
+hashtags_count
+hashtags = []
+use_counts = []
+
+sort_hashtags = sorted(hashtags_count.items(), key=lambda xg: xg[1], reverse=True)
+
+for j in sort_hashtags:
+    hashtags.append(j[0])
+    use_counts.append(j[1])
+    
+hashtags
+
+fig1, ax1 = plt.subplots(figsize=(12,5))
+ax1.title.set_text('Top 10 Hashtags')
+ax1.bar(hashtags[0:10], use_counts[0:10], color='blue')
+plt.xticks(rotation=45)
+fig1.tight_layout()
+
 ```
 
 <p align="center"><img width=86% src=https://github.com/JuliaSokolova/2017_French_Presidential_election_tweets_analysis-/blob/master/top10hashtags.png> 
