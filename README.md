@@ -138,7 +138,7 @@ user_mentions = (tweets_rdd.flatMap(lambda row: entity_fix(row))
   
 Besides Emmanual Macron and MLP, who are these other mentions?
 
-TLMP: <a href='https://en.wikipedia.org/wiki/It's_Only_TV'>It's only TV</a>, a French television show known as Touche pas à mon poste ! that was covering the election heavily.
+TLMP: <a href="https://en.wikipedia.org/wiki/It's_Only_TV">It's only TV</a>, a French television show known as Touche pas à mon poste ! that was covering the election heavily.
 
 BFMTV: <a href='https://en.wikipedia.org/wiki/BFM_TV'>A 24 hour news</a> and weather channel.
 
