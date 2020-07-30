@@ -1,4 +1,4 @@
-<h1>Presedential Election 2017 in France: Twitter Analysis</h1>
+<h1>Presidential Election 2017 in France: Twitter Analysis</h1>
 
 In 2017, Emmanuel Macron and Marine Le Pen were the final two candidates in the French Presidential Election. The two candidates had drastically different approaches to governing, and as such, the election was a major topic of discussion on Twitter.
 
@@ -19,7 +19,7 @@ In 2017, Emmanuel Macron and Marine Le Pen were the final two candidates in the 
 
 ## Objective 
 
-The objective of this case study was to analyzie twitter discussions happening in France in time before the election to compare popularity of both candiates, and to point media influencers. 
+The objective of this case study was to analyzie twitter discussions happening in France in time before the election to compare popularity of both candidates, and to point media influencers. 
 
 <br>
 
